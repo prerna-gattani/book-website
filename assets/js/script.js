@@ -75,3 +75,16 @@ const navigateTab = function () {
 }
 
 addEventOnelem(tabCard, "click", navigateTab);
+
+
+// Simulate loading time (adjust as needed)
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("main-content");
+
+  // You can remove the timeout and call this when real content loads
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+    content.style.display = "block";
+  }, 2500); // 2.5 seconds
+});
